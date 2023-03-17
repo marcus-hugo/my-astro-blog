@@ -1,7 +1,8 @@
 ---
 import "../styles/global.css"
-
-const pageTitle = "My Home Page"
+import Navigation from "../components/Navigation.astro"
+import Footer from "../components/Footer.astro"
+const pageTitle = "Hi, I'm Marcus Hugo!"
 ---
 
 <html lang="en">
@@ -11,19 +12,21 @@ const pageTitle = "My Home Page"
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+    <style>
+      h2 {
+        color: #155e75;
+      }
+    </style>
   </head>
   <body>
     <header>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about/">About Me</a></li>
-          <li><a href="/blog/">My Blog</a></li>
-        </ul>
-      </nav>
+      <Navigation />
     </header>
     <main>
       <h1>{pageTitle}</h1>
+      <h2>Frontend Web Developer.</h2>
+      <p>Thanks for visiting my homepage! Portfolio and blog websites are fun to build! I hope you enjoy wandering around my website!</p>
     </main>
+    <Footer />
   </body>
 </html>
