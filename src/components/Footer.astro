@@ -1,18 +1,25 @@
 ---
-const platform = "github"
-const username = "marcus-hugo"
+import Social from "./Social.astro"
 ---
+
+<style>
+  ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+</style>
 
 <footer>
   <ul>
     <li>
-      <a href="https://twitter.com/MarcusPHugo" target="_blank" rel="noopener noreferrer">Twitter</a>
+      <Social platform="Twitter" username="MarcusPHugo" />
     </li>
     <li>
-      <a href="https://www.linkedin.com/in/marcus-hugo-27823b32" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <Social platform="LinkedIn" username="marcus-hugo-27823b32" />
     </li>
     <li>
-      <a href="https://github.com/marcus-hugo" target="_blank" rel="noopener noreferrer">Github</a>
+      <Social platform="GitHub" username="marcus-hugo" />
     </li>
     <li>
       <a href="mailto:phantomboss300@yahoo.com">Email</a>
