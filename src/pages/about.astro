@@ -15,16 +15,12 @@ const happy = true
 const finished = false
 const goal = 3
 
-const skillColor = "#155e75"
+const skillColor = "#06b6d4"
 const fontWeight = "bold"
 const textCase = "uppercase"
 ---
 
 <style define:vars={{ skillColor, fontWeight, textCase }}>
-  h1 {
-    color: rebeccapurple;
-    font-size: 4rem;
-  }
   .skill {
     color: var(--skillColor);
     font-weight: var(--fontWeight);
@@ -33,6 +29,8 @@ const textCase = "uppercase"
 </style>
 
 <BaseLayout pageTitle={pageTitle}>
+  <!-- h1 is part of BaseLayout dynamically updated by pageTitle. -->
+  <!-- Everything after is slotted in. -->
   <h2>... and my new Astro site!</h2>
   <p>Here are a few facts about me:</p>
   <ul>
